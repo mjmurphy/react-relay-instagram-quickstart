@@ -25,11 +25,7 @@ Relay.injectNetworkLayer(
 
 ### 3. Configure build schema endpoint
 
-Set the `GRAPHQL_ENDPOINT` variable by passing it to your npm script.
-
-```sh
-GRAPHQL_ENDPOINT=https://api.graph.cool/relay/v1/__PROJECT_ID__ npm start
-```
+Set the `GRAPHQL_ENDPOINT` variable in your environment or update `https://api.graph.cool/relay/v1/__PROJECT_ID__` in `package.json`.
 
 This step is needed in order to support Relay. More info can be found here: [babel-plugin-react-relay](https://github.com/graphcool/babel-plugin-react-relay).
 
@@ -40,7 +36,7 @@ You're done configuring the example application. Please run the following comman
 
 ```sh
 npm install
-GRAPHQL_ENDPOINT=https://api.graph.cool/relay/v1/__PROJECT_ID__ npm start
+npm start
 ```
 
 ### 5. Deploy the example
