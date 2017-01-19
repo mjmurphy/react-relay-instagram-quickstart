@@ -16,7 +16,7 @@ class ListPage extends React.Component {
           + New Post
         </Link>
         <div className='w-100' style={{ maxWidth: 400 }}>
-          {this.props.viewer.allPosts.edges.reverse().map(({node}) =>
+          {this.props.viewer.allPosts.edges.map(({node}) =>
             <Post key={node.id} post={node} viewer={this.props.viewer} />
           )}
         </div>
@@ -29,7 +29,7 @@ export default Relay.createContainer(ListPage, {
   fragments: {
     viewer: () => Relay.QL`
       fragment on Viewer {
-        allPosts(first: 1000000) {
+        allPosts(first: 1000, orderBy: createdAt_DESC) {
           edges {
             node {
               id
