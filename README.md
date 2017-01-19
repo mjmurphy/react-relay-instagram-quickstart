@@ -8,38 +8,33 @@ After [downloading this example](https://github.com/graphcool-examples/react-rel
 
 ### 1. Create an account
 
-To run this example, please create a [graph.cool](http://graph.cool) account and **copy your endpoint**. This shouldn't take longer than a minute. We promise!
+To run this example, please create a [Graphcool](http://graph.cool) account and **copy your endpoint**. This shouldn't take longer than a minute. We promise!
 
 ![](https://i.gyazo.com/a0fb8e342ec9844e466cd6dc0a27516d.gif)
 
 
-### 2. Configure app data endpoint
+### 2. Configure app data and build schema endpoint
 
-Open `src/index.js` and paste your endpoint to the following line:
+Open `package.json` and replace `https://api.graph.cool/relay/v1/__PROJECT_ID__` with your endpoint in the following line:
 
 ```js
-Relay.injectNetworkLayer(
-  new Relay.DefaultNetworkLayer('https://api.graph.cool/relay/v1/__PROJECT_ID__')
-);
+    "start": "GRAPHQL_ENDPOINT=${GRAPHQL_ENDPOINT:=https://api.graph.cool/relay/v1/__PROJECT_ID__} webpack-dev-server -d --hot --inline --history-api-fallback --no-info --port 3000",
 ```
-
-### 3. Configure build schema endpoint
-
-Set the `GRAPHQL_ENDPOINT` variable in your environment or update `https://api.graph.cool/relay/v1/__PROJECT_ID__` in `package.json`.
 
 This step is needed in order to support Relay. More info can be found here: [babel-plugin-react-relay](https://github.com/graphcool/babel-plugin-react-relay).
 
-
-### 4. Run the example
+### 3. Run the example
 
 You're done configuring the example application. Please run the following command and open [localhost:3000](http://localhost:3000) in your browser. Have fun exploring! 🎉
 
 ```sh
-npm install
-npm start
+yarn && yarn start
+# or npm install && npm start
 ```
 
-### 5. Deploy the example
+## Deploy the example
+
+Instead of running the app locally, you can also deploy it to [Netlify](https://www.netlify.com). Keep your **project endpoint** ready!
 
 ```sh
 npm install -g netlify-cli
