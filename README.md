@@ -1,5 +1,7 @@
 # react-relay-instagram-example
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/graphcool-examples/react-relay-instagram-example.svg)](https://greenkeeper.io/)
+
 ![] (http://i.imgur.com/Hqwsxmq.png)
 
 ## Getting Started
