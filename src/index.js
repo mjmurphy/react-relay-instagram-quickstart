@@ -7,15 +7,8 @@ import { Router, Route, browserHistory, applyRouterMiddleware } from 'react-rout
 import useRelay from 'react-router-relay'
 import './index.css'
 
-// The x-graphcool-source header is to let the server know that the example app has started.
-// (Not necessary for normal projects)
-
 Relay.injectNetworkLayer(
-  new Relay.DefaultNetworkLayer('https://api.graph.cool/relay/v1/whipdart-antelope-513', {
-    headers: {
-      'x-graphcool-source': 'example:react-relay-instagram',
-    },
-  })
+  new Relay.DefaultNetworkLayer('__RELAY_API_ENDPOINT__')
 )
 
 const ViewerQueries = { viewer: () => Relay.QL`query { viewer }` }
