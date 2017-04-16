@@ -40,7 +40,16 @@ type Post {
 
 ### 3. Connect the app with your GraphQL API
 
-Copy the `Relay API` endpoint into `package.json` replacing `__RELAY_API_ENDPOINT__` in the following line:
+Copy the `Relay API` endpoint to `./src/app.js` as the argument for the constructor of `Relay.DefaultNetworkLayer`, replacing `__RELAY_API_ENDPOINT__ `:
+
+```js
+// replace `__RELAY_API_ENDPOINT__ ` with the endpoint from the previous step
+Relay.injectNetworkLayer(
+  new Relay.DefaultNetworkLayer('__RELAY_API_ENDPOINT__')
+);
+```
+
+Further, open `package.json` and copy the `Relay API` endpoint into it replacing `__RELAY_API_ENDPOINT__` in the following line:
 
 ```js
 "start": "GRAPHQL_ENDPOINT=${GRAPHQL_ENDPOINT:=__RELAY_API_ENDPOINT__} webpack-dev-server -d --hot --inline --history-api-fallback --no-info --port 3000",
