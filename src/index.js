@@ -11,7 +11,7 @@ import './index.css'
 // (Not necessary for normal projects)
 
 Relay.injectNetworkLayer(
-  new Relay.DefaultNetworkLayer(process.env.GRAPHQL_URL, {
+  new Relay.DefaultNetworkLayer('https://api.graph.cool/relay/v1/whipdart-antelope-513', {
     headers: {
       'x-graphcool-source': 'example:react-relay-instagram',
     },

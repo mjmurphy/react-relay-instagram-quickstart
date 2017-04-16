@@ -1,49 +1,71 @@
 # react-relay-instagram-example
 
-![](http://i.imgur.com/Hqwsxmq.png)
+* [React](https://facebook.github.io/react/): Frontend framework for building user interfaces
+* [Relay](https://facebook.github.io/relay/): Powerful GraphQL client developed by Facebook
+* [Graphcool](https://www.graph.cool): Flexible backend platform combining GraphQL + AWS Lambda
 
-## Getting Started
+## Example ([Live demo](https://demo-react-relay-instagram-example.netlify.com) & [GraphQL Playground](https://api.graph.cool/simple/v1/instagram-example))
 
-After [downloading this example](https://github.com/graphcool-examples/react-relay-instagram-example/archive/master.zip) please follow these steps.
+![](http://imgur.com/3S6fUeI.gif)
 
-### 1. Create an account
+## Quickstart
 
-To run this example, please create a [Graphcool](http://graph.cool) account and **copy your endpoint**. This shouldn't take longer than a minute. We promise!
+For more information on how to get started [refer to the full react-relay-instagram tutorial](https://www.graph.cool/docs/quickstart/react-relay-instagram-example).
 
-![](https://i.gyazo.com/a0fb8e342ec9844e466cd6dc0a27516d.gif)
+### 1. Clone example repository
 
+```sh
+git clone https://github.com/graphcool-examples/react-relay-instagram-example.git
+cd react-relay-instagram-example
+```
 
-### 2. Configure app data and build schema endpoint
+### 2. Create GraphQL API with [`graphcool`](https://www.npmjs.com/package/graphcool)
 
-Open `package.json` and replace `https://api.graph.cool/relay/v1/__PROJECT_ID__` with your endpoint in the following line:
+```sh
+# Install Graphcool CLI
+npm install -g graphcool
+
+# Create a new project based on the Instagram schema
+graphcool init --url graph.cool/schema/instagram 
+```
+
+This creates a GraphQL API for the following schema:
+
+```graphql
+type Post {
+  description: String!
+  imageUrl: String!
+}
+```
+
+### 3. Connect the app with your GraphQL API
+
+Copy the `Simple API` endpoint into `package.json` replacing `__SIMPLE_API_ENDPOINT__` in the following line:
 
 ```js
-    "start": "GRAPHQL_ENDPOINT=${GRAPHQL_ENDPOINT:=https://api.graph.cool/relay/v1/__PROJECT_ID__} webpack-dev-server -d --hot --inline --history-api-fallback --no-info --port 3000",
+"start": "GRAPHQL_ENDPOINT=${GRAPHQL_ENDPOINT:=__SIMPLE_API_ENDPOINT__} webpack-dev-server -d --hot --inline --history-api-fallback --no-info --port 3000",
 ```
 
-This step is needed in order to support Relay. More info can be found here: [babel-plugin-react-relay](https://github.com/graphcool/babel-plugin-react-relay).
+The line will look similar to this afterwards:
 
-### 3. Run the example
+```js
+"start": "GRAPHQL_ENDPOINT=${GRAPHQL_ENDPOINT:=https://api.graph.cool/simple/v1/abcdefghijklmnop} webpack-dev-server -d --hot --inline --history-api-fallback --no-info --port 3000",
+```
 
-You're done configuring the example application. Please run the following command and open [localhost:3000](http://localhost:3000) in your browser. Have fun exploring! 🎉
+
+### 4. Install depdendencies & run locally
 
 ```sh
-yarn && yarn start
-# or npm install && npm start
+yarn install
+yarn start # open http://localhost:3000 in your browser
 ```
 
-## Deploy the example
+## Next steps
 
-Instead of running the app locally, you can also deploy it to [Netlify](https://www.netlify.com). Keep your **project endpoint** ready!
+* [Advanced GraphQL features](x)
+* [Authentication & Permissions](x)
+* [Implementing business logic with serverless functions](x)
 
-```sh
-npm install -g netlify-cli
-netlify deploy
-```
-
-or click the deploy button to see it live.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/graphcool-examples/react-relay-instagram-example)
 
 ## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
 
