@@ -7,6 +7,8 @@ import { Router, Route, browserHistory, applyRouterMiddleware } from 'react-rout
 import useRelay from 'react-router-relay'
 import './index.css'
 
+// Paste your endpoint for the Relay API here.
+// Info: https://github.com/graphcool-examples/react-relay-instagram-example#2-create-graphql-api-with-graphcool
 Relay.injectNetworkLayer(
   new Relay.DefaultNetworkLayer('__RELAY_API_ENDPOINT__')
 )

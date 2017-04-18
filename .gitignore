@@ -5,6 +5,7 @@ node_modules
 
 # production
 build
+.netlify
 
 # misc
 .DS_Store
