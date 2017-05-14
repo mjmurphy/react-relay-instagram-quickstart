@@ -15,8 +15,8 @@ For more information on how to get started [refer to the full react-relay-instag
 ### 1. Clone example repository
 
 ```sh
-git clone https://github.com/graphcool-examples/react-relay-instagram-example.git
-cd react-relay-instagram-example
+git clone https://github.com/graphcool-examples/react-relay-instagram-quickstart.git
+cd react-relay-instagram-quickstart
 ```
 
 ### 2. Create GraphQL API with [`graphcool`](https://www.npmjs.com/package/graphcool)
