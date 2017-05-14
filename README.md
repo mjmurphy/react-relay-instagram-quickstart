@@ -1,4 +1,4 @@
-# react-relay-instagram-example
+# react-relay-instagram-quickstart
 
 * [React](https://facebook.github.io/react/): Frontend framework for building user interfaces
 * [Relay](https://facebook.github.io/relay/): Powerful GraphQL client developed by Facebook
@@ -10,7 +10,7 @@
 
 ## Quickstart
 
-For more information on how to get started [refer to the full react-relay-instagram tutorial](https://www.graph.cool/docs/quickstart/react-relay-instagram-example).
+For more information on how to get started [refer to the full react-relay-instagram tutorial](https://www.graph.cool/docs/quickstart/).
 
 ### 1. Clone example repository
 
@@ -62,7 +62,7 @@ The line will look similar to this afterwards:
 ```
 
 
-### 4. Install depdendencies & run locally
+### 4. Install dependencies & run locally
 
 ```sh
 yarn install
@@ -72,8 +72,8 @@ yarn start # open http://localhost:3000 in your browser
 ## Next steps
 
 * [Advanced GraphQL features](x)
-* [Authentication & Permissions](x)
-* [Implementing business logic with serverless functions](x)
+* [Authentication & Permissions](https://www.graph.cool/docs/reference/authorization/overview-iegoo0heez/)
+* [Implementing business logic with serverless functions](https://www.graph.cool/docs/reference/functions/overview-boo6uteemo/)
 
 
 ## Help & Community [![Slack Status](https://slack.graph.cool/badge.svg)](https://slack.graph.cool)
